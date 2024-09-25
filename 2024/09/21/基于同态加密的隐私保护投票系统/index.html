@@ -21,17 +21,17 @@
   <meta name="author" content="crane">
   <meta name="keywords" content="">
   
-    <meta name="description" content="基于同态加密的隐私保护投票系统框架图 密码学安全逻辑 后端接口文档数据需求方 端口号：5000 获取公钥：   URL: &#x2F;get_pubkey method: POST response:  已经存在密钥对，直接返回公钥 12345&#123;    &quot;status&quot;: &quot;success&quot;,    &quot;message&quot;: &amp;qu">
+    <meta name="description" content="基于同态加密的隐私保护投票系统框架图 密码学安全逻辑 后端接口文档数据需求方 端口号：5000 获取公钥：   URL: &#x2F;get_pubkey method: GET response:  已经存在密钥对，直接返回公钥 12345&#123;    &quot;status&quot;: &quot;success&quot;,    &quot;message&quot;: &amp;quo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于同态加密的隐私保护投票系统">
 <meta property="og:url" content="https://cr4ne.asia/2024/09/21/%E5%9F%BA%E4%BA%8E%E5%90%8C%E6%80%81%E5%8A%A0%E5%AF%86%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E6%8A%95%E7%A5%A8%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="crane&#39;s blog">
-<meta property="og:description" content="基于同态加密的隐私保护投票系统框架图 密码学安全逻辑 后端接口文档数据需求方 端口号：5000 获取公钥：   URL: &#x2F;get_pubkey method: POST response:  已经存在密钥对，直接返回公钥 12345&#123;    &quot;status&quot;: &quot;success&quot;,    &quot;message&quot;: &amp;qu">
+<meta property="og:description" content="基于同态加密的隐私保护投票系统框架图 密码学安全逻辑 后端接口文档数据需求方 端口号：5000 获取公钥：   URL: &#x2F;get_pubkey method: GET response:  已经存在密钥对，直接返回公钥 12345&#123;    &quot;status&quot;: &quot;success&quot;,    &quot;message&quot;: &amp;quo">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cr4ne.asia/img/%E5%9F%BA%E4%BA%8E%E5%90%8C%E6%80%81%E5%8A%A0%E5%AF%86%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E6%8A%95%E7%A5%A8%E7%B3%BB%E7%BB%9F/image.png">
 <meta property="og:image" content="https://cr4ne.asia/img/%E5%9F%BA%E4%BA%8E%E5%90%8C%E6%80%81%E5%8A%A0%E5%AF%86%E7%9A%84%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E6%8A%95%E7%A5%A8%E7%B3%BB%E7%BB%9F/image1.png">
 <meta property="article:published_time" content="2024-09-21T12:17:10.453Z">
-<meta property="article:modified_time" content="2024-09-23T09:18:36.058Z">
+<meta property="article:modified_time" content="2024-09-25T13:47:48.181Z">
 <meta property="article:author" content="crane">
 <meta property="article:tag" content="Crypto">
 <meta property="article:tag" content="Cybersecurity">
@@ -308,7 +308,7 @@
 </ol>
 <ul>
 <li>URL: &#x2F;get_pubkey</li>
-<li>method: POST</li>
+<li>method: GET</li>
 <li>response:</li>
 </ul>
 <p>已经存在密钥对，直接返回公钥</p>
@@ -347,7 +347,7 @@
 </ol>
 <ul>
 <li>URL: &#x2F;get_vote_info</li>
-<li>method: POST</li>
+<li>method: GET</li>
 <li>response:</li>
 </ul>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;status&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;success&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;message&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Vote info fetched&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;teacher1&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;teacher2&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-string">&quot;teacher3&quot;</span><span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
@@ -360,7 +360,7 @@
 </ol>
 <ul>
 <li>URL: &#x2F;get_vote_result</li>
-<li>method: POST</li>
+<li>method: GET</li>
 <li>response:</li>
 </ul>
 <p>分数为总分</p>
