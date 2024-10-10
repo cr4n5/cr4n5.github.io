@@ -21,20 +21,25 @@
   <meta name="author" content="crane">
   <meta name="keywords" content="">
   
-    <meta name="description" content="XIaoYuanKouSuan小猿口算 碎碎念代码有点屎山哈哈哈哈，抛砖引玉, 有问题欢迎提issue 环境配置 root的安卓设备(lsposed等) python3 adb  代码修改1234567891011121314151617181920def str_to_xy(str):    match str:        case &quot;1&quot;:            ret">
+    <meta name="description" content="XIaoYuanKouSuan小猿口算, 采用抓包方式获取题目和答案, 通过 adb 模拟滑动操作，比机器识别更快更准确！  目录 XIaoYuanKouSuan 目录 演示视频 碎碎念 :thought_balloon: 环境配置 :hammer_and_wrench: 代码修改 :pencil2: 使用 :hammer_and_wrench:    演示视频https:&#x2F;&#x2F;github.com">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小猿口算冲冲冲">
 <meta property="og:url" content="https://cr4ne.asia/2024/10/10/%E5%B0%8F%E7%8C%BF%E5%8F%A3%E7%AE%97%E5%86%B2%E5%86%B2%E5%86%B2/index.html">
 <meta property="og:site_name" content="crane&#39;s blog">
-<meta property="og:description" content="XIaoYuanKouSuan小猿口算 碎碎念代码有点屎山哈哈哈哈，抛砖引玉, 有问题欢迎提issue 环境配置 root的安卓设备(lsposed等) python3 adb  代码修改1234567891011121314151617181920def str_to_xy(str):    match str:        case &quot;1&quot;:            ret">
+<meta property="og:description" content="XIaoYuanKouSuan小猿口算, 采用抓包方式获取题目和答案, 通过 adb 模拟滑动操作，比机器识别更快更准确！  目录 XIaoYuanKouSuan 目录 演示视频 碎碎念 :thought_balloon: 环境配置 :hammer_and_wrench: 代码修改 :pencil2: 使用 :hammer_and_wrench:    演示视频https:&#x2F;&#x2F;github.com">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.shields.io/badge/language-python-blue.svg">
+<meta property="og:image" content="https://img.shields.io/github/stars/cr4n5/XiaoYuanKouSuan.svg">
+<meta property="og:image" content="https://img.shields.io/github/forks/cr4n5/XiaoYuanKouSuan.svg">
+<meta property="og:image" content="https://img.shields.io/github/issues/cr4n5/XiaoYuanKouSuan.svg">
 <meta property="article:published_time" content="2024-10-10T05:41:00.000Z">
-<meta property="article:modified_time" content="2024-10-10T05:42:39.139Z">
+<meta property="article:modified_time" content="2024-10-10T07:33:22.432Z">
 <meta property="article:author" content="crane">
 <meta property="article:tag" content="lsposed">
 <meta property="article:tag" content="adb">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img.shields.io/badge/language-python-blue.svg">
   
   
   
@@ -245,7 +250,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          258 字
+          364 字
         
       </span>
     
@@ -257,7 +262,7 @@
         
         
           <!-- compatible with older versions-->
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -299,44 +304,62 @@
             
               <div class="markdown-body">
                 
-                <h1 id="XIaoYuanKouSuan"><a href="#XIaoYuanKouSuan" class="headerlink" title="XIaoYuanKouSuan"></a>XIaoYuanKouSuan</h1><p>小猿口算</p>
-<h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>代码有点屎山哈哈哈哈，抛砖引玉, 有问题欢迎提issue</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ol>
-<li>root的安卓设备(lsposed等)</li>
-<li>python3</li>
-<li>adb</li>
+                <h1 id="XIaoYuanKouSuan"><a href="#XIaoYuanKouSuan" class="headerlink" title="XIaoYuanKouSuan"></a>XIaoYuanKouSuan</h1><p>小猿口算, 采用抓包方式获取题目和答案, 通过 adb 模拟滑动操作，比机器识别更快更准确！</p>
+<p><img src="https://img.shields.io/badge/language-python-blue.svg" srcset="/img/loading.gif" lazyload alt="Language"><br><img src="https://img.shields.io/github/stars/cr4n5/XiaoYuanKouSuan.svg" srcset="/img/loading.gif" lazyload alt="Stars"><br><img src="https://img.shields.io/github/forks/cr4n5/XiaoYuanKouSuan.svg" srcset="/img/loading.gif" lazyload alt="Forks"><br><img src="https://img.shields.io/github/issues/cr4n5/XiaoYuanKouSuan.svg" srcset="/img/loading.gif" lazyload alt="Issues"></p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#xiaoyuankousuan">XIaoYuanKouSuan</a><ul>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91">演示视频</a></li>
+<li><a href="#%E7%A2%8E%E7%A2%8E%E5%BF%B5-thought_balloon">碎碎念 :thought_balloon:</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-hammer_and_wrench">环境配置 :hammer_and_wrench:</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E4%BF%AE%E6%94%B9-pencil2">代码修改 :pencil2:</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8-hammer_and_wrench">使用 :hammer_and_wrench:</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="演示视频"><a href="#演示视频" class="headerlink" title="演示视频"></a>演示视频</h2><p><a target="_blank" rel="noopener" href="https://github.com/user-attachments/assets/e9ccfa25-4bdd-4b43-855c-af4a045dcb00">https://github.com/user-attachments/assets/e9ccfa25-4bdd-4b43-855c-af4a045dcb00</a></p>
+<h2 id="碎碎念-thought-balloon"><a href="#碎碎念-thought-balloon" class="headerlink" title="碎碎念 :thought_balloon:"></a>碎碎念 :thought_balloon:</h2><p>代码有点屎山哈哈哈哈，抛砖引玉, 有问题欢迎提 issue :bug:</p>
+<h2 id="环境配置-hammer-and-wrench"><a href="#环境配置-hammer-and-wrench" class="headerlink" title="环境配置 :hammer_and_wrench:"></a>环境配置 :hammer_and_wrench:</h2><ol>
+<li>root 的安卓设备(lsposed 等) :iphone:</li>
+<li>python3 :snake:</li>
+<li>adb :electric_plug:</li>
 </ol>
-<h2 id="代码修改"><a href="#代码修改" class="headerlink" title="代码修改"></a>代码修改</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">str_to_xy</span>(<span class="hljs-params"><span class="hljs-built_in">str</span></span>):<br>    <span class="hljs-keyword">match</span> <span class="hljs-built_in">str</span>:<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;1&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1480</span>, <span class="hljs-number">1050</span>], [<span class="hljs-number">1440</span>, <span class="hljs-number">1470</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;2&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1255</span>, <span class="hljs-number">1100</span>], [<span class="hljs-number">1700</span>, <span class="hljs-number">1100</span>], [<span class="hljs-number">1255</span>, <span class="hljs-number">1470</span>], [<span class="hljs-number">1700</span>, <span class="hljs-number">1470</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;3&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1344</span>, <span class="hljs-number">1040</span>], [<span class="hljs-number">1600</span>, <span class="hljs-number">1200</span>], [<span class="hljs-number">1270</span>, <span class="hljs-number">1323</span>], [<span class="hljs-number">1635</span>, <span class="hljs-number">1379</span>], [<span class="hljs-number">1249</span>, <span class="hljs-number">1588</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;4&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1716</span>, <span class="hljs-number">1274</span>],[<span class="hljs-number">1245</span>,<span class="hljs-number">1296</span>],[<span class="hljs-number">1450</span>,<span class="hljs-number">1030</span>],[<span class="hljs-number">1450</span>,<span class="hljs-number">1466</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;5&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1558</span>,<span class="hljs-number">1020</span>],[<span class="hljs-number">1290</span>,<span class="hljs-number">1211</span>],[<span class="hljs-number">160</span>,<span class="hljs-number">1348</span>],[<span class="hljs-number">1300.1472</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;6&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1533</span>,<span class="hljs-number">1027</span>],[<span class="hljs-number">1265</span>,<span class="hljs-number">1428</span>],[<span class="hljs-number">1663</span>,<span class="hljs-number">1439</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;&gt;&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[[<span class="hljs-number">1350</span>, <span class="hljs-number">1080</span>], [<span class="hljs-number">1545</span>, <span class="hljs-number">1172</span>], [<span class="hljs-number">1295</span>, <span class="hljs-number">1297</span>]]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;&lt;&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[[<span class="hljs-number">1578</span>,<span class="hljs-number">1058</span>],[<span class="hljs-number">1308</span>,<span class="hljs-number">1231</span>],[<span class="hljs-number">1560</span>,<span class="hljs-number">1292</span>]]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;=&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[[<span class="hljs-number">1284</span>, <span class="hljs-number">1122</span>], [<span class="hljs-number">1700</span>, <span class="hljs-number">1122</span>]],[[<span class="hljs-number">1280</span>, <span class="hljs-number">1300</span>], [<span class="hljs-number">1700</span>, <span class="hljs-number">1300</span>]]]<br></code></pre></td></tr></table></figure>
+<h2 id="代码修改-pencil2"><a href="#代码修改-pencil2" class="headerlink" title="代码修改 :pencil2:"></a>代码修改 :pencil2:</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">str_to_xy</span>(<span class="hljs-params"><span class="hljs-built_in">str</span></span>):<br>    <span class="hljs-keyword">match</span> <span class="hljs-built_in">str</span>:<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;1&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1480</span>, <span class="hljs-number">1050</span>], [<span class="hljs-number">1440</span>, <span class="hljs-number">1470</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;2&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1255</span>, <span class="hljs-number">1100</span>], [<span class="hljs-number">1700</span>, <span class="hljs-number">1100</span>], [<span class="hljs-number">1255</span>, <span class="hljs-number">1470</span>], [<span class="hljs-number">1700</span>, <span class="hljs-number">1470</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;3&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1344</span>, <span class="hljs-number">1040</span>], [<span class="hljs-number">1600</span>, <span class="hljs-number">1200</span>], [<span class="hljs-number">1270</span>, <span class="hljs-number">1323</span>], [<span class="hljs-number">1635</span>, <span class="hljs-number">1379</span>], [<span class="hljs-number">1249</span>, <span class="hljs-number">1588</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;4&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1716</span>, <span class="hljs-number">1274</span>],[<span class="hljs-number">1245</span>,<span class="hljs-number">1296</span>],[<span class="hljs-number">1450</span>,<span class="hljs-number">1030</span>],[<span class="hljs-number">1450</span>,<span class="hljs-number">1466</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;5&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1558</span>,<span class="hljs-number">1020</span>],[<span class="hljs-number">1290</span>,<span class="hljs-number">1211</span>],[<span class="hljs-number">160</span>,<span class="hljs-number">1348</span>],[<span class="hljs-number">1300.1472</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;6&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[<span class="hljs-number">1533</span>,<span class="hljs-number">1027</span>],[<span class="hljs-number">1265</span>,<span class="hljs-number">1428</span>],[<span class="hljs-number">1663</span>,<span class="hljs-number">1439</span>]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;&gt;&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[[<span class="hljs-number">1350</span>, <span class="hljs-number">1080</span>], [<span class="hljs-number">1545</span>, <span class="hljs-number">1172</span>], [<span class="hljs-number">1295</span>, <span class="hljs-number">1297</span>]]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;&lt;&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[[<span class="hljs-number">1578</span>,<span class="hljs-number">1058</span>],[<span class="hljs-number">1308</span>,<span class="hljs-number">1231</span>],[<span class="hljs-number">1560</span>,<span class="hljs-number">1292</span>]]]<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;=&quot;</span>:<br>            <span class="hljs-keyword">return</span> [[[<span class="hljs-number">1284</span>, <span class="hljs-number">1122</span>], [<span class="hljs-number">1700</span>, <span class="hljs-number">1122</span>]],[[<span class="hljs-number">1280</span>, <span class="hljs-number">1300</span>], [<span class="hljs-number">1700</span>, <span class="hljs-number">1300</span>]]]<br></code></pre></td></tr></table></figure>
 
 <p>根据设备分辨率修改坐标（同元组内坐标连续滑动）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">answer_write</span>(<span class="hljs-params">answer</span>):<br>    <br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(answer)):<br>        number_command.swipe_screen(answer[i])<br>        <span class="hljs-comment"># time.sleep(0.16)</span><br>        time.sleep(<span class="hljs-number">0.3</span>)<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">answer_write</span>(<span class="hljs-params">answer</span>):<br><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(answer)):<br>        number_command.swipe_screen(answer[i])<br>        <span class="hljs-comment"># time.sleep(0.16)</span><br>        time.sleep(<span class="hljs-number">0.3</span>)<br></code></pre></td></tr></table></figure>
 
 <p>根据所需更改每个题目间隔时间</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<h2 id="使用-hammer-and-wrench"><a href="#使用-hammer-and-wrench" class="headerlink" title="使用 :hammer_and_wrench:"></a>使用 :hammer_and_wrench:</h2><ol>
 <li>安装依赖</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">pip install -r requirements.txt<br></code></pre></td></tr></table></figure>
 
 <ol start="2">
-<li>配置root设备</li>
+<li>配置 root 设备</li>
 </ol>
-<p>采用trust me already禁用app ssl</p>
+<p>采用 trust me already 禁用 app ssl</p>
 <ol start="3">
-<li>配置adb</li>
+<li>配置 adb</li>
 </ol>
 <ul>
-<li>打开开发者选项中的usb调试</li>
+<li>打开开发者选项中的 usb 调试</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">adb devices<br></code></pre></td></tr></table></figure>
 
 <ol start="4">
 <li>配置安卓代理</li>
 </ol>
-<p>WIFI设置代理为电脑ip和端口(8080)</p>
+<p>WIFI 设置代理为电脑 ip 和端口(8080)</p>
 <ol start="5">
 <li>运行</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">python main.py<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">python main.py -H &lt;host&gt; -p &lt;port&gt;<br></code></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">python main.py -H 0.0.0.0 -p 8080<br></code></pre></td></tr></table></figure>
+
+<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/cr4n5/XiaoYuanKouSuan">XiaoYuanKouSuan</a></p>
 
                 
               </div>
